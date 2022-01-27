@@ -1,10 +1,16 @@
-section.section {
+.section {
   background-color: $black;
   height: 100vh;
   align-items: center;
   display: flex;
 
+  @include desktop-lg{
+    padding: 500px 0;
+  }
   @media screen and (max-height: 750px ) {
+    padding: 550px 0;
+  }
+  @media (max-width: 520px)  {
     padding: 550px 0;
   }
 
@@ -25,13 +31,19 @@ section.section {
     animation: animate 4s ease-in-out infinite;
     background: linear-gradient(270deg, #206794, #13cccc);
     position: relative;
-  
+
     @include desktop {
       width: 80px;
       height: 80px;
       font-size: 35px;
     }
-  
+
+    @include mobile {
+      width: 72px;
+      height: 72px;
+      font-size: 30px;
+    }
+
     &:hover,
     &.active {
       background: linear-gradient(270deg, #209480, #11f089);
