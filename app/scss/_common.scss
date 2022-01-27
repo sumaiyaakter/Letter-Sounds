@@ -1,0 +1,73 @@
+section.section {
+  background-color: $black;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+}
+
+.play-btn {
+  border: 0;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 50%;
+  font-size: 50px;
+  text-transform: uppercase;
+  transition: .3s;
+  font-weight: 700;
+  background: #2a2a2a;
+  color: $white;
+  box-shadow: 7px 9px 16px rgba(33, 37, 41, 0.5);
+  -webkit-animation: animate 4s ease-in-out infinite;
+  -moz-animation: animate 4s ease-in-out infinite;
+  -o-animation: animate 4s ease-in-out infinite;
+  animation: animate 4s ease-in-out infinite;
+
+  @include mobile {
+    width: 70px;
+    height: 70px;
+    font-size: 35px;
+  }
+
+  &:hover,
+  &.active {
+    box-shadow: 5px 4px 14px rgb(0 0 0 / 30%);
+  }
+}
+
+
+
+// Animation Start
+button.play-btn:nth-child(n+2) {
+  -webkit-animation: animate 4s ease-in-out infinite;
+  -moz-animation: animate 4s ease-in-out infinite;
+  -o-animation: animate 4s ease-in-out infinite;
+  animation: animate 4s ease-in-out infinite;
+}
+
+button.play-btn:nth-child(3n+3) {
+  -webkit-animation: animate 6s ease-in-out infinite;
+  -moz-animation: animate 6s ease-in-out infinite;
+  -o-animation: animate 6s ease-in-out infinite;
+  animation: animate 6s ease-in-out infinite;
+}
+
+button.play-btn:nth-child(3n+2) {
+  -webkit-animation: animate 8s ease-in-out infinite;
+  -moz-animation: animate 8s ease-in-out infinite;
+  -o-animation: animate 8s ease-in-out infinite;
+  animation: animate 8s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(0);
+  }
+}
+// Animation End
